@@ -1,32 +1,33 @@
 """Rock Paper Scissors game
 This game will allow the user to play rock, paper, scissors with the computer.
 """
-from random import randint # Error 1
+
+from random import randint 
 
 options = ["ROCK", "PAPER", "SCISSORS"]
 
-message = {"tie": "Yawn it's a tie", # Error 2
-           "won": "Yay you won!",
-           "lost": "Aww you lost!"} # Error 3
+message = {"tie":"Yawn it's a tie","won": "Yay you won!","lost":"Aww you lost!"}
 
-def decide_winner(user_choice, computer_choice): # Error 4
-    print "you selected: %s" % user_choice
-    print "computer selected: %s" % computer_choice # Error 5
+def decide_winner(user_choice, computer_choice):
+# I think at line 14, 15, there should be something quoting user_choice and computer_choice after %
+  print "you selected: %s" % user_choice
+  print "computer selected: %s" % computer_choice
 
-    if user_choice == computer_choice:
-        print message["tie"] # Error 6
-    elif user_choice == options[0] and computer_choice == options[2]: 
-        print message["won"]
-    elif user_choice == options[1] and computer_choice == options[0]:
-        print message["won"]
-    elif user_choice == options[2] and computer_choice == options[1]: # Error 7
-        print message["won"]
-    else:
-        print message["lost"] # Error 8
-      
+if user_choice == computer_choice:
+  print message["tie"]
+elif "user_choice" == options[0] and "computer_choice" == options[2]:
+  print message["won"]
+elif "user_choice" == options[1] and "computer_choice" == options[0]:
+  print message["won"]
+elif "user_choice" == options[2] and "computer_choice" == options[1]:
+  print message["won"]
+else:
+  print message["lost"]
+ 	 
 def play_RPS():
-    user_choice = raw_input("Enter Rock, Paper, or Scissors") # Error 8
-    user_choice = user_choice.upper() # Error 10
-    computer_choice = options[randint(0,2)] # Error 11
-    decide_winner(user_choice, computer_choice)
-play_RPS() # Error 12
+	print "Enter Rock, Paper, or Scissors:"
+  user_choice() = raw_input
+	user_choice.upper()
+	computer_choice = options[randint(2,0)]
+decide_winner("user_choice", "computer_choice")
+play_RPS()
